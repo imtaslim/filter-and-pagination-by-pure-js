@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <main>
+      <header class="flex justify-center items-center h-20 bg-gray-200 shadow border border-gray-400">
+        <h1>District List</h1>
+      </header>
+      <div class="w-full p-10 bg-gray-200">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+			<div class="relative">
+				<svg xmlns="http://www.w3.org/2000/svg" class="absolute top-3 text-gray-400 left-3 h-6 w-6 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+				</svg>
+				<input class="w-full p-3 pl-12 mb-2 outline-none" type="text" id="myInput" onkeyup="filter(this.value)" placeholder="Search for names.." title="Type in a name">
+			</div>
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" class="px-6 py-3">SL</th>
+                <th scope="col" class="px-6 py-3">District Name</th>
+                <th scope="col" class="px-6 py-3">Division Name</th>
+              </tr>
+            </thead>
+            <tbody id="List"></tbody>
+          </table>
+		  <div class="pagenumbers" id="pagination"></div>
+        </div>
+      </div>
+    </main>
+    <script src="district.js"></script>
+  </body>
+</html>
